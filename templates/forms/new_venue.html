@@ -1,0 +1,71 @@
+{% extends 'layouts/main.html' %}
+{% block title %}New Venue{% endblock %}
+{% block content %}
+  <div class="form-wrapper">
+    <form method="post" class="form">
+      <h3 class="form-heading">List a new venue <a href="{{ url_for('index') }}" title="Back to homepage"><i class="fa fa-home pull-right"></i></a></h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{ form.name(class_ = 'form-control', autofocus = true) }}
+      </div>
+      <div class="form-group">
+          <label>City & State</label>
+          <div class="form-inline">
+            <div class="form-group">
+              {{ form.city(class_ = 'form-control', placeholder='City', autofocus = true) }}
+            </div>
+            <div class="form-group">
+              {{ form.state(class_ = 'form-control', placeholder='State', autofocus = true) }}
+            </div>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        {{ form.address(class_ = 'form-control', autofocus = true) }}
+      </div>
+      <div class="form-group">
+          <label for="phone">Phone</label>
+          {{ form.phone(class_ = 'form-control', placeholder='xxx-xxx-xxxx', autofocus = true) }}
+        </div>
+      <div class="form-group">
+        <label for="genres">Genres</label>
+        <small>Ctrl+Click to select multiple</small>
+        {{ form.genres(class_ = 'form-control', placeholder='Genres, separated by commas',id='form.state', autofocus = true) }}
+      </div>
+      <div class="form-group">
+          <label for="genres">Facebook Link</label>
+          {{ form.facebook_link(class_ = 'form-control', placeholder='http://', id='form.state', autofocus = true) }}
+        </div>
+        <div class="form-group">
+          <label for="website">Website Link</label>
+          <!-- {{ form.facebook_link(class_ = 'form-control', placeholder='http://', id='form.state', autofocus = true) }} -->
+          <input type="text" class="form-control" name="website" id="website" autofocus=true placeholder="http://">
+        </div>
+        <div class="form-group">
+          <label for="website">Image Link</label>
+          <!-- {{ form.facebook_link(class_ = 'form-control', placeholder='http://', id='form.state', autofocus = true) }} -->
+          <input type="text" class="form-control" name="image" id="image" autofocus=true placeholder="http://">
+        </div>
+        <div class="form-group">
+          <label for="website">Seeking talent</label>
+          <!-- {{ form.facebook_link(class_ = 'form-control', placeholder='http://', id='form.state', autofocus = true) }} -->
+          <input type="text" class="form-control" name="stalent" id="stalent" autofocus=true placeholder="Optional">
+        </div>
+        <!-- <div class="form-group">
+          <label for="website">Image</label>
+          <input type="file" name="image" id="image">
+        </div> -->
+        <!-- <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01"
+              aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div> -->
+      <input type="submit" value="Create Venue" class="btn btn-primary btn-lg btn-block">
+    </form>
+  </div>
+{% endblock %}
