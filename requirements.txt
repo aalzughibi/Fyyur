@@ -1,4 +1,4 @@
-aiohttp==3.6.2
+aiohttp==3.7.4
 alembic==1.4.2
 arabic-reshaper==2.0.15
 async-timeout==3.0.1
