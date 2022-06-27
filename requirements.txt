@@ -48,7 +48,7 @@ python-http-client==3.2.7
 python3-openid==3.1.0
 pytz==2019.1
 qrcode==6.1
-reportlab==3.5.23
+reportlab==3.5.55
 requests==2.22.0
 requests-oauthlib==1.2.0
 sendgrid==6.3.1
